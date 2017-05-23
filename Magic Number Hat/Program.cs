@@ -19,7 +19,9 @@ namespace Numbers_Hat
         {
             // Output a simple intro message to the user
             Console.WriteLine("Welcome to the Magic Number Hat app.");
-            Console.WriteLine("I will pick a random number out of a range from the magic hat for you, but I need you to tell me what the range is.");
+            Console.WriteLine("I will pick a random number out of a range from the magic hat for you,");
+            Console.WriteLine("but I need you to tell me what the range is.");
+            Console.WriteLine("");
 
             bool rerun = true; // Rerun the number generate if user chooses to
             while (rerun)
@@ -50,6 +52,7 @@ namespace Numbers_Hat
                     while(true)
                     {
                         // Ask if user would like to select another random number
+                        Console.WriteLine("");
                         Console.WriteLine("Would you like to generate another random number?");
                         Console.WriteLine("Type Y for \"Yes\" or N to quit.");
                         var repeat = Console.ReadLine().ToLower();
