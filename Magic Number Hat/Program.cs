@@ -7,7 +7,7 @@ using static System.Math;
 
 
 /*
- *  written my Jose Quinones
+ *  Authur: Jose Quinones
  *  This simple console app will request a range of numbers from the user and output a random number in the given range.
  *  This app can be useful for allowing decisions to be made by "chance".
 */
