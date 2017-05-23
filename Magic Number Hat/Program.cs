@@ -21,11 +21,11 @@ namespace Numbers_Hat
             Console.WriteLine("Welcome to the Magic Number Hat app.");
             Console.WriteLine("I will pick a random number out of a range from the magic hat for you, but I need you to tell me what the range is.");
 
-            while (true)
+            bool rerun = true; // Rerun the number generate if user chooses to
+            while (rerun)
             {
                 try
                 {
-
                     // Request the first number in the range
                     Console.Write("Enter the first number in the range: ");
                     var firstEntry = Console.ReadLine();
@@ -38,21 +38,12 @@ namespace Numbers_Hat
 
                     // Sort input values into a low number and a high number
                     var lowNum = Min(int1, int2);
-                    Console.WriteLine("lowNum = " + lowNum);
                     var highNum = Max(int1, int2);
-                    Console.WriteLine("highNum = " + highNum);
 
                     // Select random number in given range
                     Random rnd = new Random();
                     var selectedNum = rnd.Next(lowNum, highNum + 1);
                     Console.WriteLine("Random number = " + selectedNum);
-
-                    // Display a count down before the random number is show to the user
-                    Console.WriteLine("And the random number is...");
-                    for (var i = 10; i == 0; i--)
-                    {
-                        Console.WriteLine(i);
-                    }
 
                     // Display the random number
                     Console.WriteLine("\"" + selectedNum +"\"");
@@ -61,38 +52,38 @@ namespace Numbers_Hat
                     {
                         // Ask if user would like to select another random number
                         Console.WriteLine("Would you like to generate another random number?");
-                        Console.Write("Type Y for \"Yes\" or N to quit.");
+                        Console.WriteLine("Type Y for \"Yes\" or N to quit.");
                         var repeat = Console.ReadLine().ToLower();
-
 
                         try
                         {
-                            if (repeat != "y" || repeat != "n")
-                            {
-                                Console.WriteLine("That was not a valid entry");
-                                Console.Write("Please enter a valid response.");
-                                continue;
-                            }
                             if (repeat == "y")
                             {
-                                continue;
+                                break; // Exit loop and rerun generator
+                            }
+                            else if (repeat == "n")
+                            {
+                                Console.Write("Thank you for using the Number Hat.  Goodbye.");
+                                rerun = false; // User has decided not to rerun the random number generator. Exit loop and end program.
+                                break;
                             }
                             else
                             {
-                                Console.Write("Thank you for using the Number Hat.  Goodbye.");
-                                break;
+                                Console.WriteLine("That was not a valid entry");
+                                Console.WriteLine("Please enter a valid response.");
+                                continue;
                             }
                         }
                         catch (FormatException)
                         {
                             Console.WriteLine("That was not a valid entry");
-                            Console.Write("Please enter a valid response.");
+                            Console.WriteLine("Please enter a valid response.");
                             continue;
                         }
                     }
                     
-                    // End the loop and end the program
-                    break;
+                    // Repeat loop, user has decided to rerun the generator
+                    continue;
                 }
                 catch (FormatException)
                 {
