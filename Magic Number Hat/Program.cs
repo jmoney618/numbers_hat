@@ -43,10 +43,9 @@ namespace Numbers_Hat
                     // Select random number in given range
                     Random rnd = new Random();
                     var selectedNum = rnd.Next(lowNum, highNum + 1);
-                    Console.WriteLine("Random number = " + selectedNum);
 
                     // Display the random number
-                    Console.WriteLine("\"" + selectedNum +"\"");
+                    Console.WriteLine("Your random number is \"" + selectedNum +"\".");
 
                     while(true)
                     {
