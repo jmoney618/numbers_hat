@@ -52,10 +52,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>D4D96FE94EFDCA2FFA775F9EB78B0BE38F6435C5</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>4F68373BFE70AA1CC42A997B06510AAC2A9316C5</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>Numbers Hat_1_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
