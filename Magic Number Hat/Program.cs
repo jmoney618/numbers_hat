@@ -19,6 +19,7 @@ namespace Numbers_Hat
         {
             // Output a simple intro message to the user
             Console.WriteLine("Welcome to the Magic Number Hat app.");
+            Console.WriteLine("");
             Console.WriteLine("I will pick a random number out of a range from the magic hat for you,");
             Console.WriteLine("but I need you to tell me what the range is.");
             Console.WriteLine("");
