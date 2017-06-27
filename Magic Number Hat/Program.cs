@@ -32,20 +32,20 @@ namespace Numbers_Hat
                     // Request the first number in the range
                     Console.Write("Enter the first number in the range: ");
                     var firstEntry = Console.ReadLine();
-                    var int1 = int.Parse(firstEntry);
+                    int int1 = int.Parse(firstEntry);
 
                     // Request the second number in the range
                     Console.Write("Now enter the second number in the range: ");
                     var secondEntry = Console.ReadLine();
-                    var int2 = int.Parse(secondEntry);
+                    int int2 = int.Parse(secondEntry);
 
                     // Sort input values into a low number and a high number
-                    var lowNum = Min(int1, int2);
-                    var highNum = Max(int1, int2);
+                    int lowNum = Min(int1, int2);
+                    int highNum = Max(int1, int2);
 
                     // Select random number in given range
                     Random rnd = new Random();
-                    var selectedNum = rnd.Next(lowNum, highNum + 1);
+                    int selectedNum = rnd.Next(lowNum, highNum + 1);
 
                     // Display the random number
                     Console.WriteLine("Your random number is \"" + selectedNum +"\".");
