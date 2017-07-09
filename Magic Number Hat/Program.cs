@@ -48,9 +48,9 @@ namespace Numbers_Hat
                     int selectedNum = rnd.Next(lowNum, highNum + 1);
 
                     // Display the random number
-                    Console.WriteLine("Your random number is \"" + selectedNum +"\".");
+                    Console.WriteLine("Your random number is \"" + selectedNum + "\".");
 
-                    while(true)
+                    while (true)
                     {
                         // Ask if user would like to select another random number
                         Console.WriteLine("");
@@ -84,7 +84,7 @@ namespace Numbers_Hat
                             continue;
                         }
                     }
-                    
+
                     // Repeat loop, user has decided to rerun the generator
                     continue;
                 }
@@ -94,8 +94,8 @@ namespace Numbers_Hat
                     continue;
                 }
             }
-            
+
             Console.ReadLine();
         }
-    } 
+    }
 }
